@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4012379838">
+    <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="3cab80d7-d904-41cf-98a8-d33a19d01fc4">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dff9dfc2dfc3dfc4dfcfdfc6dfc5dfcddf93df99</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
