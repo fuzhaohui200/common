@@ -12,13 +12,15 @@ import java.io.InputStream;
 
 import javax.imageio.ImageIO;
 
+import com.venky.ocr.ImageUtil;
+import com.venky.ocr.TextRecognizer;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 /**
- * 相关描述：
+ * 相关描述：识别验证码
  *
  * 文件名：OCRTest.java
  * 作者： AutoNavi 
@@ -43,8 +45,8 @@ public class OCRTest {
             /* System.out.println(EntityUtils.toString(entity)); */
             InputStream is = entity.getContent();
             BufferedImage image = ImageIO.read(is);
-            String imgcode = new OCR().recognizeEverything(image);
- 
+            //String imgcode = new OCR().recognizeEverything(image);
+            String imgcode = new TextRecognizer().recognize(image).toString();
             System.out.println("\n---- 验证码是: ------- \n" + imgcode);
         } catch (Exception e) {
         	
