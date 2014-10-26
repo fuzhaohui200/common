@@ -17,8 +17,8 @@ public class MongoIndex {
 
     public MongoIndex() {
         try{
-            Mongo mg = new Mongo();
-            DB db = mg.getDB("test");
+            MongoClient mongoClient = new MongoClient();
+            DB db = mongoClient.getDB("test");
             mongoCollection = db.getCollection("users");
         } catch (Exception e) {
             e.printStackTrace();
