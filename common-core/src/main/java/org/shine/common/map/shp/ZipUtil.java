@@ -1,7 +1,5 @@
 package org.shine.common.map.shp;
 
-import com.mapabc.gds.constant.GdsConstants;
-import com.mapabc.gds.util.log.GLog;
 import org.apache.commons.compress.archivers.zip.ZipArchiveEntry;
 import org.apache.commons.compress.archivers.zip.ZipArchiveInputStream;
 import org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream;
@@ -101,7 +99,7 @@ public class ZipUtil {
                 			break;
                 		}
                 	}
-                	if(file.getName().endsWith(GdsConstants.FILE_TYPE_DBF)||file.getName().endsWith(GdsConstants.FILE_TYPE_CSV)){
+                	if(file.getName().endsWith("dbf")||file.getName().endsWith("cvs")){
                 		//只返回压缩包内第一个文件
                 		if(fileCount==0){
                 			filePath = file.getAbsolutePath();
@@ -189,13 +187,13 @@ public class ZipUtil {
                     IOUtils.copy(is, out);
                     out.closeArchiveEntry();
                 }catch (Exception e) {
-                    GLog.error(e.getMessage(), e, true);
+                    e.printStackTrace();
                 }finally{
                     IOUtils.closeQuietly(is);
                 }
             }
         } catch (Exception e) {
-            GLog.error(e.getMessage(), e, true);
+            e.printStackTrace();
         }finally {
             IOUtils.closeQuietly(out);
         }
