@@ -232,10 +232,10 @@ public class ScaleImageUtil {
 	
 	public static void main(String[] args) {
 		//System.out.println(getFormatName(new File("F:/images/test.jpg")));
-		String imageSrc = "F:/result/_MG_9986.JPG";
-		String imgDist = "F:/result/43502_1_ss6.jpg";
+		String imageSrc = ScaleImageUtil.class.getResource("/").getPath()+"/psb.jpeg";
+		String imgDist = ScaleImageUtil.class.getResource("/").getPath()+"/psb2.jpeg";
 		try {
-			scaleMaxImageToFile(imageSrc, imgDist, 110);
+			scaleMaxImageToFile(imageSrc, imgDist, 500);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

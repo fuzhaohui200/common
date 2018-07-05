@@ -1,5 +1,8 @@
+/*
 package org.shine.common.map.shp;
 
+import com.mapabc.gds.constant.GdsConstants;
+import com.mapabc.gds.util.log.GLog;
 import org.apache.commons.compress.archivers.zip.ZipArchiveEntry;
 import org.apache.commons.compress.archivers.zip.ZipArchiveInputStream;
 import org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream;
@@ -10,24 +13,28 @@ import java.io.*;
 
 public class ZipUtil {
 	private static final int BUFFERLEN = 1024;
-	/**
+	*/
+/**
 	 * 解压缩zip文件，取出其中shp/csv文件
 	 * @param srcFile	源zip文件
 	 * @param destDir   解压后文件存放地址
 	 * @return 	返回解压后的文件绝对路径.	只会解压第一个shp/csv文件.
 	 * @throws Exception
-	 */
+	 *//*
+
     public static String unzipFile(File srcFile,String srcEncoding, File destDir,String destEncoding) throws Exception {  
     	return unzipFile(new FileInputStream(srcFile), srcEncoding, destDir,destEncoding);
     }
     
-    /**
+    */
+/**
 	 * 解压缩zip文件，取出其中shp/csv文件
 	 * @param srcIn		源zip文件输入流
 	 * @param destDir   解压后文件存放地址
 	 * @return 	返回解压后的文件绝对路径.	只会解压第一个shp/csv文件.
 	 * @throws Exception
-	 */
+	 *//*
+
 	public static String unzipFile(InputStream srcIn,String srcEncoding, File destDir,String destEncoding) throws Exception{
 		String filePath = null;
 		ZipArchiveInputStream is = null;  
@@ -66,12 +73,14 @@ public class ZipUtil {
         return filePath;
 	}
 	
-	/**
+	*/
+/**
 	 * 直接解压zip文件流到目的目录
 	 * @param srcIn
 	 * @param destDir
 	 * @throws Exception	//如果有多个csv或者多个shp文件,则抛出异常.
-	 */
+	 *//*
+
 	public static String unzipFile(InputStream srcIn, File destDir,String charSet) throws Exception{
 		String filePath = null;
 		ZipArchiveInputStream is = null;  
@@ -99,7 +108,7 @@ public class ZipUtil {
                 			break;
                 		}
                 	}
-                	if(file.getName().endsWith("dbf")||file.getName().endsWith("cvs")){
+                	if(file.getName().endsWith(GdsConstants.FILE_TYPE_DBF)||file.getName().endsWith(GdsConstants.FILE_TYPE_CSV)){
                 		//只返回压缩包内第一个文件
                 		if(fileCount==0){
                 			filePath = file.getAbsolutePath();
@@ -125,13 +134,15 @@ public class ZipUtil {
         } 
         return filePath;
 	}
-	/**
+	*/
+/**
 	 * 解压文件到目录中
 	 * @param srcFile
 	 * @param destDir
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public static String unzipFile(File srcFile, File destDir,String charSet) throws Exception{
 		if(null == srcFile || destDir == null){
 			return null;
@@ -139,12 +150,14 @@ public class ZipUtil {
 		FileInputStream fis = new FileInputStream(srcFile);
 		return unzipFile(fis,destDir,charSet);
 	}
-	/**
+	*/
+/**
 	 * 打包单个csv文件.
 	 * @param srcFile
 	 * @param destFile
 	 * @throws java.io.IOException
-	 */
+	 *//*
+
 	public static void zipSingleFile(File srcFile, File destFile) throws IOException {
         ZipArchiveOutputStream out = null;
         InputStream is = null;
@@ -161,12 +174,14 @@ public class ZipUtil {
             IOUtils.closeQuietly(out);
         }
     }
-	/**
+	*/
+/**
 	 * 把
 	 * @param srcFolder		/opt/aa/
 	 * @param destFile		XXX.zip
 	 * @throws java.io.IOException
-	 */
+	 *//*
+
 	public static void zipFolder(File srcFolder, File destFile) throws Exception {
 		if(null == srcFolder || destFile == null){
 			return ;
@@ -187,18 +202,19 @@ public class ZipUtil {
                     IOUtils.copy(is, out);
                     out.closeArchiveEntry();
                 }catch (Exception e) {
-                    e.printStackTrace();
+                    GLog.error(e.getMessage(), e, true);
                 }finally{
                     IOUtils.closeQuietly(is);
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            GLog.error(e.getMessage(), e, true);
         }finally {
             IOUtils.closeQuietly(out);
         }
     }
-	/**
+	*/
+/**
 	 * 解压zip包
 	 * @param srcIn  
 	 * @param srcEncoding
@@ -206,7 +222,8 @@ public class ZipUtil {
 	 * @param destEncoding
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public static String decZipFile(InputStream srcIn,String srcEncoding, File destDir,String destEncoding) throws Exception{
 		ZipArchiveInputStream is = null;
         try {
@@ -245,3 +262,4 @@ public class ZipUtil {
     	System.out.println(path);
 	}
 }
+*/

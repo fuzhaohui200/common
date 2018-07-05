@@ -1,3 +1,4 @@
+/*
 package org.shine.common.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -289,20 +290,24 @@ public class BaseData implements Serializable {
         this.fsId = fsId;
     }
 
-    /**
+    */
+/**
      * Getter method for property <tt>hisInstanceId</tt>.
      * 
      * @return property value of hisInstanceId
-     */
+     *//*
+
     public long getHisInstanceId() {
         return hisInstanceId;
     }
 
-    /**
+    */
+/**
      * Setter method for property <tt>hisInstanceId</tt>.
      * 
      * @param hisInstanceId value to be assigned to property hisInstanceId
-     */
+     *//*
+
     public void setHisInstanceId(long hisInstanceId) {
         this.hisInstanceId = hisInstanceId;
     }
@@ -366,4 +371,4 @@ public class BaseData implements Serializable {
     public void setErrorFileHeader(String errorFileHeader) {
         this.errorFileHeader = errorFileHeader;
     }
-}
+}*/

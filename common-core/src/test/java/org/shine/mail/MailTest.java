@@ -8,9 +8,9 @@ public class MailTest {
         mailInfo.setMailServerHost("smtp.163.com");
         mailInfo.setMailServerPort("25");
         mailInfo.setValidate(true);
-        mailInfo.setUserName("fuzhaohui202@163.com");
-        mailInfo.setPassword("shinelog93");// 您的邮箱密码
-        mailInfo.setFromAddress("fuzhaohui202@163.com");
+        mailInfo.setUserName("devboka@163.com");
+        mailInfo.setPassword("shboka123$");// 您的邮箱密码
+        mailInfo.setFromAddress("devboka@163.com");
         mailInfo.setToAddress("fuzhaohui200@gmail.com");
         mailInfo.setSubject("设置邮箱标题 如http://www.guihua.org 中国桂花网");
         mailInfo.setContent("设置邮箱内容 如http://www.guihua.org 中国桂花网 是中国最大桂花网站==");
